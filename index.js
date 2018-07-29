@@ -18,7 +18,7 @@ function forkRepo() {
     headers:{
       Authorization: `token ${getToken}`
     }
-  });
+  }).then(res=>res.json().then(json=>showForkedRepo));
 }
 
 function getToken() {
